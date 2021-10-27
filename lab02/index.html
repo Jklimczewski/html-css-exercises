@@ -98,8 +98,7 @@
         </tr>
     </table>
 
-    <form action="https://inf.ug.edu.pl/~atejszerska/wdtw/tests/user.php">
-
+    <form action="https://inf.ug.edu.pl/~atejszerska/wdtw/tests/user.php" method="get">
     <table>
         <tr>
             <td> <label>Użytkownik </label> </td>
@@ -110,11 +109,22 @@
             <td> <input type="password" name="password"> </td>
         </tr>
         <tr>
-            <td colspan="2"> <input type="button" value="Wyślij"> </td>
+            <td colspan="2"> <button type="submit"> Wyślij </button> </td>
         </tr>
-
     </table>
+    </form>
 
+    <form action="https://inf.ug.edu.pl/~atejszerska/wdtw/tests/date.php" method="get">
+    <table>
+        <tr> 
+            <td> <label> Data: </label>
+            <input type="number" name="day" maxlength="2" min="1" max="31">
+	        <input type="number" name="month" maxlength="2" min="1" max="12">
+            <input type="number" name="year" maxlength="4" min="1" max="2021">
+            <button type="submit"> Sprawdź </button>
+            </td>
+        </tr>
+    </table>
     </form>
 </body>
 </html>
