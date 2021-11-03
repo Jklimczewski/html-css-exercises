@@ -1,0 +1,28 @@
+body
+{
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+.A
+{
+    position: absolute;
+    width: 325px;
+    height: 150px;
+    background-color: lightblue;
+    border: blue 5px solid;
+}
+.B
+{
+    position: absolute;
+    width: 325px;
+    height: 150px;
+    background-color: lightcoral;
+    border: red 5px solid;
+    left: 100px;
+    top: 50px;
+}
