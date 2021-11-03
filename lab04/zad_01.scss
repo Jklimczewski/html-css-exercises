@@ -1,0 +1,23 @@
+div
+{
+    display: inline-block;
+}
+.A
+{
+    position: relative;
+    left: 15px;
+    top: 10px;
+}
+.B
+{
+    position: relative;
+    left: 15px;
+    bottom: 10px;
+}
+.C
+{
+    width: 310px;
+    height: 55px;
+    background-color:yellow;
+    border: red 5px solid;
+}
