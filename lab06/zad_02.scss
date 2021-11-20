@@ -1,0 +1,41 @@
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* repeat (5 kolumn i bierze całą szerokość strony i dopasowuje do 5 kolumn tyle samo px */
+    grid-gap: 15px;
+    font-size: 25px;
+    text-align: center;
+    .item
+    {
+        background-color: #b8bc86;
+        border: 1px solid black;
+    }
+    .item9
+    {
+        background-color: salmon;
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+    .item11
+    {
+        background-color: lavender;
+        grid-column: 2;
+        grid-row-start: 3;
+        grid-row-end: 7;
+    }
+    .item16
+    {
+        background-color: #00ffff;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+    .item29
+    {
+        background-color: #CD853F;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+}
