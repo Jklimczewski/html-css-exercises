@@ -1,0 +1,66 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+#nav
+{
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(201, 190, 190);
+    text-align: center;
+    box-shadow: -2px 13px 13px -13px rgba(66, 68, 90, 0.92);
+}
+.nav-item
+{
+    padding: 20px;
+}
+h2
+{
+    text-align: center;
+}
+a
+{
+    text-decoration: dotted;
+    color: black;
+}
+a.nav-item
+{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a.nav-item:hover
+{
+    color: grey;
+    text-decoration: underline;
+}
+a.nav-item:visited
+{
+    color: red;
+}
+#content
+{
+    padding-top: 70px;
+}
+.c3
+{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.author
+{
+    text-align: center;
+}
+p
+{
+    margin-left: 100px;
+    padding: 10px;
+    line-height: 20px;
+}
+.notenum
+{
+    position: absolute;
+    left: 50px;
+}
