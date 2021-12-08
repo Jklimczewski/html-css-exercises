@@ -1,0 +1,22 @@
+body
+{
+    font-size: 16px;
+    text-align: justify;
+}
+.title
+{
+    font-size: 22px;
+    font-weight: bold;
+}
+.underline
+{
+    text-decoration: underline;
+}
+#bold
+{
+    font-weight: bold;
+}
+.info
+{
+    color: red;
+}
