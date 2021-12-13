@@ -1,0 +1,57 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1e19;
+    height: 100vh; 
+  }
+  .look {
+        border-radius: 20px;
+        background-color: #34352f;
+        padding: 20px;
+  }
+.container {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    grid-gap: 20px;
+    padding: 250px;
+    padding-left: 350px;
+    grid-template-areas: 
+        "item-1 item-2 image"
+        "item-3 item-3 image"
+        "item-3 item-3 info";
+    .item-1 {
+        grid-area: item-1;
+        @extend .look;
+    }
+    .item-2 {
+        grid-area: item-2;
+        @extend .look;
+    }
+    .item-3 {
+        grid-area: item-3;
+        @extend .look;
+    }
+    .image {
+        background-image: url("foggy.jpg");
+        background-size: cover;
+        grid-area: image;
+        @extend .look;
+        padding: 0;
+    }
+    .info {
+        grid-area: info;
+        @extend .look;
+    }
+    p {
+        text-align: right;
+    }
+    .header {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .description {
+        padding-top: 20px;
+    }
+}
