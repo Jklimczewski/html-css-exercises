@@ -1,0 +1,120 @@
+$colors: lightblue, lightcoral, lightsteelblue, lightgreen, lightsalmon, lightslategrey, lightgray, lightpink, lightseagreen;
+
+body {
+  background-color: rgb(28, 30, 33);
+  padding: 0;
+  margin: 20px 150px;
+  color: wheat;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  .change-photo {
+    background-color: rgba(46, 128, 139, 0.808);
+    padding: 60px;
+    border-radius: 100%;
+    .fas {
+      position: relative;
+      left: 60px;
+      top: 50px;
+      padding: 5px;
+      border-radius: 100%;
+      background-color: rgb(185, 185, 185);
+    }
+  }
+  .name {
+    padding-left: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+.nav {
+  background-color: rgba(68, 73, 82, 0.288);
+  display: flex;
+  border-radius: 10px;
+  .box {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    .menu-list {
+      width: 40vw;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      .menu-item {
+        a {
+          text-decoration: none;
+          color: lightslategrey;
+        }
+      }
+    }
+    .buttons {
+      button {
+        height: 35px;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 0 15px;
+        background-color: rgb(67, 73, 80);
+        color: white;
+      }
+    }
+  }
+}
+.container {
+  display: flex;
+  color: white;
+  .left {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    padding: 20px;
+    > .box:first-of-type {
+      background-color: rgba(68, 73, 82, 0.288);
+      .photos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        .photo {
+          width: 20px;
+          @each $color in $colors {
+          $id:1;
+          &:nth-child(#{$id}) {
+            background-color: $color;
+          }
+          $id:$id+1;
+          }
+        }
+      }
+    }
+    .footer {
+      ul {
+        display: flex;
+        list-style-type: none;
+        li {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .photos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 100px;
+  }
+  .box {
+    background-color: rgba(68, 73, 82, 0.288);
+ 
+ }
+ .box:last-of-type {
+   text-align: center;
+ }
+ a {
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+ }
+}
