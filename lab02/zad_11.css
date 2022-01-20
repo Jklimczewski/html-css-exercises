@@ -8,6 +8,7 @@ ul > li > ul > li > ul > li
 {
     color: blue;
     font-weight: normal;
+    list-style-type: square;
 }
 ul > li
 {

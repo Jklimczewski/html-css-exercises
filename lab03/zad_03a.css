@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(230, 228, 228);
+}
+header {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(223, 193, 155);
+}
+.section {
+    margin: 15px auto;
+    width: 70vw;
+    background-color: rgb(241, 241, 241);
+}
+form {
+    padding: 35px;
+}
+legend {
+    font-size: 20px;
+    color: grey;
+    letter-spacing: 3px;
+}
+fieldset {
+    padding: 20px;
+}
+.form-group {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 350px;
+    text-transform: uppercase;
+    text-align: right;
+}
+input {
+    margin: 5px;
+    padding: 3px;
+    width: 300px;
+}
+.button {
+    text-align: right;
+}
+button {
+    padding: 10px 15px;
+    background-color: grey;
+    color: white;
+}
+table, tr, td {
+    text-align: justify;
+    padding: 15px;
+}
+th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: burlywood;
+    padding: 5px;
+}
+tr > td:last-child {
+    display: block;
+}
+tr:nth-of-type(odd){
+    background-color: rgb(206, 206, 206);
+}

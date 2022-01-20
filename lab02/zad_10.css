@@ -1,22 +1,18 @@
-body
-{
-    font-size: 16px;
+body {
+    font-size: 25px;
     text-align: justify;
 }
-.title
-{
-    font-size: 22px;
+.title {
+    font-size: 30px;
     font-weight: bold;
 }
-.underline
-{
+.underline {
     text-decoration: underline;
 }
-#bold
-{
+.underline > #bold {
     font-weight: bold;
 }
-.info
-{
+.info {
+    font-size: 20px;
     color: red;
 }

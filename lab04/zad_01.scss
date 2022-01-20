@@ -1,22 +1,20 @@
-div {
+div { 
     display: inline-block;
 }
-.C
-{
-    width: 310px;
-    height: 55px;
+.C {
+    border: 5px solid red;
+    letter-spacing: 5px;
+    font-size: 20px;    
+    width: 270px;
+    height: 50px;
+    padding: 10px;
     background-color: yellow;
-    border: 5px  solid red;
-}
-.A
-{
-    position: relative;
-    left: 15px;
-    top: 10px;
-}
-.B
-{
-    position: relative;
-    left: 15px;
-    bottom: 10px;
+    .A {
+        position: relative;
+        top: 10px;
+    }
+    .B {
+        position: relative;
+        bottom: 10px;
+    }
 }

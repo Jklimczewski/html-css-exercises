@@ -1,120 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 $colors: lightblue, lightcoral, lightsteelblue, lightgreen, lightsalmon, lightslategrey, lightgray, lightpink, lightseagreen;
+$background: rgb(28, 30, 33);
+$grey1: #242526;
+$grey2: #3a3b3c;
 
 body {
-  background-color: rgb(28, 30, 33);
-  padding: 0;
-  margin: 20px 150px;
-  color: wheat;
+  background-color: $background;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 .header {
+  width: 1300px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: $background;
+  color: white;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 20px;
+  position: relative;
+  .logo {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    border: 10px solid $grey1;
+    margin: 10px;
+  }
   .change-photo {
-    background-color: rgba(46, 128, 139, 0.808);
-    padding: 60px;
-    border-radius: 100%;
-    .fas {
-      position: relative;
-      left: 60px;
-      top: 50px;
-      padding: 5px;
-      border-radius: 100%;
-      background-color: rgb(185, 185, 185);
-    }
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.411);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 11%;
+    bottom: 15%;
   }
   .name {
-    padding-left: 20px;
-    color: white;
     font-size: 30px;
+    margin: 15px;
     font-weight: bold;
   }
 }
 .nav {
-  background-color: rgba(68, 73, 82, 0.288);
-  display: flex;
+  width: 1300px;
+  margin: 5px auto;
+  background-color: $grey1;
   border-radius: 10px;
-  .box {
+  .menu {
+    width: 100%;
     display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: center;
     .menu-list {
-      width: 40vw;
+      width: 50%;
       display: flex;
-      justify-content: space-between;
-      list-style-type: none;
+      list-style: none;
+      gap: 30px;
+      padding: 15px 25px;
+      align-items: center;
+      a {
+        color: white;
+        text-decoration: none;
+      }
       .menu-item {
-        a {
-          text-decoration: none;
-          color: lightslategrey;
-        }
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .menu-item:hover {
+        cursor: pointer;
+        background-color: $grey2;
       }
     }
     .buttons {
-      button {
-        height: 35px;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+      .btn {
+        font-size: 15px;
+        padding: 10px 20px;
+        border: none;
         border-radius: 10px;
-        margin: 5px;
-        padding: 0 15px;
-        background-color: rgb(67, 73, 80);
+        background-color: $grey2;
         color: white;
+      }
+      .btn:hover {
+        cursor: pointer;
+        background-color: grey;
       }
     }
   }
 }
+
 .container {
-  display: flex;
-  color: white;
+  width: 1300px;
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: 1.5fr 3.5fr;
+  grid-gap: 20px;
   .left {
+    position: sticky;
+    top: 20px;
+    height: 460px;
     display: flex;
     flex-direction: column;
-    width: 70vw;
-    padding: 20px;
-    > .box:first-of-type {
-      background-color: rgba(68, 73, 82, 0.288);
+    .box {
+      padding: 15px;
+      background-color: $grey1;
+      color: white;
+      border-radius: 10px;
+      h2 {
+        margin-bottom: 15px;
+        margin-left: 10px;
+      }
       .photos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5px;
-        .photo {
-          width: 20px;
-          @each $color in $colors {
-          $id:1;
-          &:nth-child(#{$id}) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px;
+        $i: 1;
+        @each $color in $colors {
+          .photo:nth-of-type(#{$i}) {
+            width: 110px;
+            height: 110px;
             background-color: $color;
+            border-radius: 10px;
+            $i: $i + 1;
           }
-          $id:$id+1;
+        }
+        .photo {
+          .content {
+            display: none;
+          }
+        }
+        .photo:hover {
+          .content {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            background-color: rgba(128, 128, 128, 0.315);
           }
         }
       }
     }
     .footer {
+      padding: 10px;
+      color: $grey2;
       ul {
         display: flex;
-        list-style-type: none;
-        li {
-          padding: 10px;
+        list-style: none;
+        gap: 10px;
+        font-size: 13px;
+        li:nth-of-type(1) {
+          border-right: 1px solid $grey2;
+          padding-right: 10px;
         }
       }
     }
   }
-  .photos {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 100px 100px;
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .box {
+      border-radius: 10px;
+      color: white;
+      background-color: $grey1;
+      p {
+        padding: 15px;
+      }
+      h3 {
+        padding: 15px 0px 0px 15px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 15px;
+      }
+      .photos {
+        margin: 20px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        .photo {
+          flex: 250px;
+          height: 220px;
+          background-color: lightgray;
+        }
+      }
+    }
+    .box:last-of-type {
+      text-align: center;
+    }
   }
-  .box {
-    background-color: rgba(68, 73, 82, 0.288);
- 
- }
- .box:last-of-type {
-   text-align: center;
- }
- a {
-   color: white;
-   font-weight: bold;
-   text-decoration: none;
- }
 }

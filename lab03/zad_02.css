@@ -4,56 +4,49 @@ body {
   }
   
   .content {
-    margin-left: auto;
-    margin-right: auto;
     width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0px;
   }
   
   h2 {
-    text-align: center  ;
     color: #045137;
     text-transform: uppercase;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
+    text-align: center;
   }
   
   .contact {
     box-shadow: 0px 0px 10px #a5a5a5;
-    margin-top: 15px;
+    margin: 20px;
+    background-color: white;
   }
   
   .name {
     background-color: #045137;
-    color:white;
-    display:block;
+    color: white;
     padding: 10px;
-    padding-left: 15px;
-    letter-spacing: 2px;
     font-weight: bold;
   }
-  .info {
-    padding: 20px;
-    background-color: white;    
+  .info {   
+    padding: 15px;  
+  }
+  span {
+    display: block;
   }
   .address {
-    display: block;
     text-align: right;
   }
-  .phone {
-    display: block;
-    padding-top: 10px;
-    text-align: left;
+  .address > span:first-child {
+      color: #045137;
   }
-  .mail {
-    display: block;
-    margin-top: 15px;
-    color: #045137;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .address > span:nth-of-type(2) {
-    display: block;
+  .address > span:nth-child(2) {
     font-size: 14px;
   }
-  .address > span:first-of-type {
-    color: green;
+  .mail {
+      color: #045137;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
   }
